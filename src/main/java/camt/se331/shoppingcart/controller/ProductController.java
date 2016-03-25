@@ -13,7 +13,8 @@ import java.util.List;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/")
+@RequestMapping(value = "getProduct",method = RequestMethod.GET)
+
 public class ProductController {
     @Autowired
     ProductService productService;
@@ -41,5 +42,10 @@ public class ProductController {
     @RequestMapping(value = "product/{id}",method = RequestMethod.DELETE)
     public  Product edit(@PathVariable("id") Long id){
         return productService.deleteProduct(id);
+    }
+
+
+    public List<Product> getListByName (@RequestParam("name") String name){
+        return productService.getProductsByName(name);
     }
 }
