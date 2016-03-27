@@ -2,8 +2,8 @@
  * Created by Comproz on 3/27/2016 AD.
  */
 'use strict';
-var shoppingCartControllers = angular.module('shoppingCartControllers', ['shoppingCartServices']);
 
+var shoppingCartControllers = angular.module('shoppingCartControllers', ['shoppingCartServices']);
 shoppingCartControllers.controller('showShoppingCartController',['$scope','shoppingCartService','$location','$rootScope',
 '$rootParams',
 function ($scope, shoppingCartService, $location, $rootScope, $rootParams){
@@ -30,3 +30,4 @@ function ($scope, shoppingCartService, $location, $rootScope, $rootParams){
         return total;
     }
 }]);
+
