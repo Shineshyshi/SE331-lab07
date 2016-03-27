@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
  * Created by Bitee on 3/27/2016.
  * Created by Shine on 3/27/2016.
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/shoppingcart")
 public class ShoppingCartController {
