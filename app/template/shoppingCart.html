@@ -21,7 +21,8 @@
                     <td>{{selectedProduct.product.name}}</td>
                     <td>{{selectedProduct.product.description}}</td>
                     <td class="col-xs-1"><input ng-model="selectedProduct.amount" class="form-control text-right"
-                                                id="selectedproductamount" placeholder="amount" name="productdescription" required/></td>
+                                                id="selectedproductamount" placeholder="amount" name="productdescription"
+                                                required></td>
                     <td class="text-right">{{selectedProduct.product.netPrice | number:2}}</td>
                     <td class="text-right">{{totalEach($index) | number:2}}</td>
                 </tr>
