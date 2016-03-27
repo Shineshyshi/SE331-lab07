@@ -8,7 +8,7 @@ var labApp = angular.module('labApp', [
     'languageServices',
     'pascalprecht.translate',
     'shoppingCartControllers'
-])
+]);
 labApp.config(['$routeProvider',
   function($routeProvider) {
   $routeProvider.

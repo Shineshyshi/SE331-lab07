@@ -5,12 +5,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-
 /**
- * Created by Comproz on 3/22/2016 AD.
+ * Created by Shine on 3/25/2016.
  */
 public interface ProductRepository extends JpaRepository<Product,Long> {
-    public List<Product> findByNameLike(String name);
-    public List<Product> findByNameContaining(String name);
-
+     List<Product> findByNameLike(String name);
+     List<Product> findByNameContaining(String name);
+     List<Product> findByNameContainingIgnoreCase(String name);
+     List<Product> findByNameOrDescriptionContainingIgnoreCase(String name,String description);
 }

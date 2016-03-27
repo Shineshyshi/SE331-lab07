@@ -1,6 +1,7 @@
 package camt.se331.shoppingcart.service;
 
 import camt.se331.shoppingcart.entity.Product;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
