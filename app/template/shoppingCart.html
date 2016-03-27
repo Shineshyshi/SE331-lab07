@@ -16,13 +16,13 @@
                     <th class="text-right" translate>listProduct.price</th>
                 </tr>
 
-                <tr ng-repeat="selecetedProduct in cart.selectedProducts">
+                <tr ng-repeat="selectedProduct in cart.selectedProducts">
                     <td>{{$index+1}}</td>
-                    <td>{{selecetedProduct.product.name}}</td>
-                    <td>{{selecetedProduct.product.description}}</td>
+                    <td>{{selectedProduct.product.name}}</td>
+                    <td>{{selectedProduct.product.description}}</td>
                     <td class="col-xs-1"><input ng-model="selectedProduct.amount" class="form-control text-right"
-                                                id="selectedproductamount" placeholder="amount" name="productdescription" required></td>
-                    <td class="text-right">{{selecetedProduct.product.netPrice | number:2}}</td>
+                                                id="selectedproductamount" placeholder="amount" name="productdescription" required/></td>
+                    <td class="text-right">{{selectedProduct.product.netPrice | number:2}}</td>
                     <td class="text-right">{{totalEach($index) | number:2}}</td>
                 </tr>
 
