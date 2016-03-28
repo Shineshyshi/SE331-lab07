@@ -6,8 +6,10 @@ shoppingCartControllers.controller('showShoppingCartController',
     ['$scope', 'shoppingCartService', '$location', '$rootScope', '$routeParams',
         function ($scope, shoppingCartService, $location, $rootScope, $rootParams) {
             var id = $rootParams.id;
+            $scope.cart=[];
             shoppingCartService.get({id: id}, function (data) {
                 $scope.cart = data;
+                console.log($scope.cart);
             });
 
             $scope.$on('$locationChangeStart', function (event) {
@@ -30,7 +32,6 @@ shoppingCartControllers.controller('showShoppingCartController',
                 angular.forEach($scope.cart.selectedProducts, function (item) {
                     total += item.amount * item.product.totalPrice;
                 });
-
                 return total;
             }
         }]);
